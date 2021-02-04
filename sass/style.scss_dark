@@ -21,7 +21,7 @@ main {
         padding: 0.8rem;
 }
 pre {
-        background: slategrey; //code area colours
+        background: slategrey; //colour of area under <pre lang="no-highlight"> </pre>
 //whitesmoke
         overflow: scroll;
         padding: 1rem;
