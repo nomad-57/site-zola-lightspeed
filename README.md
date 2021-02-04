@@ -4,12 +4,11 @@ An insanely fast and performance-based Zola theme, ported from [Light Speed Jeky
 
 Some fun facts about the theme:
 
-* Perfect score on Google's Lighthouse audit
 * Only ~700 bytes of CSS
 * No JavaScript
 * Now with SEO!
 
-Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.com)
+Original demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.com)
 
 -----
 
@@ -22,6 +21,7 @@ Demo: [quirky-perlman-34d0da.netlify.com](https://quirky-perlman-34d0da.netlify.
   - [SEO](#seo)
   - [Footer text](#footer-text)
   - [Sass](#Sass)
+  - [Syntax Highlight](Syntax-Highlighting)
 - [Original](#original)
 - [License](#license)
 
@@ -32,7 +32,7 @@ First download this theme to your `themes` directory:
 $ cd themes
 $ git clone https://github.com/carpetscheme/lightspeed.git
 ```
-and then enable it in your `config.toml`:
+and then enable it in your `config.toml`, make sure not to enable this under `[markdown]` as it doesn't get detected if you place it there:
 
 ```toml
 theme = "lightspeed"
@@ -49,16 +49,15 @@ sort_by = "date"
 ## Options
 
 ### Title
-Set a title and description in the config to appear in the site header:
+Set a title and description in the config to appear in the site header, This should ideally be placed on the top of your config.toml:
 
 ```toml
 title = "Different strokes"
 description = "for different folks"
-
 ```
 
 ### Footer-menu
-Set a field in `extra` with a key of `footer_links`:
+Set a field in `[extra]` with a key of `footer_links`:
 
 ```toml
 [extra]
@@ -115,6 +114,19 @@ compile_sass = true
 ```
 
 ...and placing a replacement `style.scss` file in your sass folder.
+
+An optional dark variant has also been provided within the styles, just rename it to `styles.scss` to use it
+
+### Syntax-Highlighting
+
+Syntax highlighting maybe enabled by setting it in config.toml:
+
+```toml
+[markdown]
+highlight_code = true
+```
+
+It is to be noted that when the default text is black, highlighting may not contrast well, so make sure you're using a dark scss when enabling this
 
 ## Original
 This template is based on the Jekyll template [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed) by Bradley Taunt.
