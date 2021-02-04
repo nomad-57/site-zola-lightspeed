@@ -126,7 +126,7 @@ Syntax highlighting maybe enabled by setting it in config.toml:
 highlight_code = true
 ```
 
-It is to be noted that when the default text is black, highlighting may not contrast well, so make sure you're using a dark scss when enabling this
+It is to be noted that when the default text is black, highlighting indented code does not contrast well atm, either specify the language or enclose whatever you want to highlight within <pre lang="no-highlight"></pre> if you want to use spaces for indenting
 
 ## Original
 This template is based on the Jekyll template [Light Speed Jekyll](https://github.com/bradleytaunt/lightspeed) by Bradley Taunt.
